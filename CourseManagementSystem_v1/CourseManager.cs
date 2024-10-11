@@ -39,8 +39,8 @@ namespace CourseManagementSystem_v1
         public void updateCourse(string courseid, string newtitle, string newduration, decimal newprice)
         {
             var updatecourse=new Course(courseid, newtitle, newduration, newprice);
-            var course = CourseList.Find(c=>c.ToString()==courseid);
-            if (course != null) {
+           
+            if (updatecourse.GetcourseId(courseid) ==courseid) {
                 updatecourse.Settitle();
                 updatecourse.SetDuration();
                 updatecourse.SetPrice();
@@ -54,9 +54,9 @@ namespace CourseManagementSystem_v1
         }
 
         public void DeleteCourse(string courseid)
-        {
-            var course = CourseList.Find(c => c.ToString() == courseid);
-            if (course != null)
+        { var course=new Course(courseid);
+         
+            if (courseid == courseid)
             {
                 CourseList.Remove(course);
                 Console.WriteLine("Course remove Successfuly");

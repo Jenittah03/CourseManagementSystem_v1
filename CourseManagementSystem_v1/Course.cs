@@ -25,6 +25,11 @@ namespace CourseManagementSystem_v1
             TotalCourses++;
         }
 
+        public Course(string courseId) 
+        { 
+            CourseId = courseId;
+        }
+
         public string GetcourseId(string courseId)
         {
             return courseId;
