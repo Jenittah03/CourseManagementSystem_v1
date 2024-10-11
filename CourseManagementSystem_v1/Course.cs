@@ -14,12 +14,15 @@ namespace CourseManagementSystem_v1
         private string Duration { get; set; }
         private decimal Price { get; set; }
 
+        private int TotalCourses { get; set; }
+
         public Course(string courseId, string title, string duration, decimal price)
         {
             CourseId = courseId;
             Title = title;
             Duration = duration;
             Price = price;
+            TotalCourses++;
         }
 
         public string GetcourseId(string courseId)
@@ -67,6 +70,12 @@ namespace CourseManagementSystem_v1
 
             Console.WriteLine(course.ToString());
             course.printCourse();
+
+        }
+
+        public virtual string DisplayCourseInfo()
+        {
+            return $"ID: {CourseId}, Title: {Title}, Duration: {Duration}, Price: {Price}";
 
         }
     }

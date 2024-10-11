@@ -18,7 +18,7 @@ namespace CourseManagementSystem_v1
         }
 
 
-        public string DisplayDigitalCourseInfo(string courseId, string title, string duration, decimal price, string courseLink, string fileSize)
+        public override string DisplayCourseInfo()
         {
             return base.ToString() + $"CourseLink:{CourseLink}  FileSize:{FileSize}";
         }

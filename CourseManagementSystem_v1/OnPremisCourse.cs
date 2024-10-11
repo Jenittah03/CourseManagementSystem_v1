@@ -17,7 +17,7 @@ namespace CourseManagementSystem_v1
             ClassroomCapacity = classroomCapacity;
         }
 
-        public string DisplayOnPremisCourseInfo(string courseId, string title, string duration, decimal price, string schedule, string classroomCapacity)
+        public override string DisplayCourseInfo()
         {
             return base.ToString() + $"Schedule: {Schedule} ClassroomCapacity:{ClassroomCapacity} ";
         }
